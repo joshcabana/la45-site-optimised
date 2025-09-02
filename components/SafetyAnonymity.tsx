@@ -18,7 +18,6 @@ export default function SafetyAnonymity() {
     <section
       id="safety"
       className="mx-auto max-w-6xl px-6 py-16 scroll-mt-24 cv-auto"
-      role="region"
       aria-labelledby="safety-title"
     >
       <h2 id="safety-title" className="font-serif text-3xl mb-6">

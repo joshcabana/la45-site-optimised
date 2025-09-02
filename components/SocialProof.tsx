@@ -2,7 +2,6 @@ export default function SocialProof() {
   return (
     <section
       className="mx-auto max-w-6xl px-6 py-16 cv-auto"
-      role="region"
       aria-labelledby="social-title"
     >
       <h2 id="social-title" className="sr-only">

@@ -32,7 +32,7 @@ export default function OnboardingPage() {
   }, [step]);
 
   return (
-    <main id="main-content">
+    <main id="main">
       <div
         id="onboarding-region"
         className="mx-auto max-w-3xl px-6 py-16 space-y-10"

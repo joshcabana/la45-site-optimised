@@ -9,7 +9,7 @@ export const metadata = { title: "Privacy Policy | LA45" };
  */
 export default function PrivacyPage() {
   return (
-    <main id="main-content" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
+    <main id="main" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
       <h1 className="font-serif text-3xl mb-4">Privacy Policy</h1>
       <p className="text-ink/80">
         LA45 was built to foster genuine connections while respecting your privacy. We minimise the

@@ -18,7 +18,9 @@ export default function StickyNav() {
 
   // Watch for scroll to add a glass effect once the user has scrolled
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => {
+      requestAnimationFrame(() => setScrolled(window.scrollY > 16));
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -30,7 +32,9 @@ export default function StickyNav() {
   // screens.
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 640) setMenuOpen(false);
+      requestAnimationFrame(() => {
+        if (window.innerWidth >= 640) setMenuOpen(false);
+      });
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -62,6 +66,7 @@ export default function StickyNav() {
           </div>
           {/* Mobile menu toggle button. Hidden on ≥sm screens */}
           <button
+            type="button"
             className="sm:hidden p-2 text-ink/80 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}

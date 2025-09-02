@@ -7,7 +7,7 @@ export const metadata = { title: "Terms of Service | LA45" };
  */
 export default function TermsPage() {
   return (
-    <main id="main-content" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
+    <main id="main" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
       <h1 className="font-serif text-3xl mb-4">Terms of Service</h1>
       <p className="text-ink/80">
         By accessing or using LA45 you agree to these terms. Please read them

@@ -111,7 +111,7 @@ function QueueInner() {
   }, []);
 
   return (
-    <main id="main-content" className="mx-auto max-w-xl px-6 py-16 space-y-6 text-center">
+    <main id="main" className="mx-auto max-w-xl px-6 py-16 space-y-6 text-center">
       <h1 className="font-serif text-3xl mb-2">Enter the queue</h1>
       <p className="text-ink/80">
         We’ll pair you for a 45‑second video intro.

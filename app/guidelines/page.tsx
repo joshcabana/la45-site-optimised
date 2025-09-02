@@ -7,7 +7,7 @@ export const metadata = { title: "Community Guidelines | LA45" };
  */
 export default function GuidelinesPage() {
   return (
-    <main id="main-content" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
+    <main id="main" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
       <h1 className="font-serif text-3xl mb-4">Community Guidelines</h1>
       <p className="text-ink/80">
         LA45 is a place for kindness, curiosity and authentic connections. To

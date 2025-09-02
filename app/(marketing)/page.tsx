@@ -6,6 +6,12 @@ import SafetyAnonymity from "@/components/SafetyAnonymity";
 import SocialProof from "@/components/SocialProof";
 import FAQ from "@/components/FAQ";
 import FooterCABANA from "@/components/FooterCABANA";
+import StructuredData from "@/components/StructuredData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 /**
  * The home page stitches together all of the landing sections. It
@@ -17,8 +23,9 @@ import FooterCABANA from "@/components/FooterCABANA";
 export default function HomePage() {
   return (
     <>
-      <main id="main-content">
+      <main id="main">
         <Hero />
+        <StructuredData />
         <DonationMount location="home" />
         <ValueProps />
         <QueueExplainer />

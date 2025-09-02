@@ -65,7 +65,6 @@ export default function FAQ() {
     <section
       id="faq"
       className="mx-auto max-w-4xl px-6 py-16 scroll-mt-24 cv-auto"
-      role="region"
       aria-labelledby="faq-title"
     >
       <h2 id="faq-title" className="font-serif text-3xl mb-6">

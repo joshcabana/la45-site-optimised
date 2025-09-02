@@ -15,7 +15,6 @@ export default function TokenPacks() {
     <section
       id="token-packs"
       className="mx-auto max-w-6xl px-6 py-16 scroll-mt-24"
-      role="region"
       aria-labelledby="tokens-title"
     >
       <div className="flex items-end justify-between gap-4 mb-6">

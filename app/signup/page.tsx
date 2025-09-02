@@ -41,12 +41,13 @@ export default function SignupPage() {
   };
 
   return (
-    <main id="main-content" className="mx-auto max-w-xl px-6 py-16">
+    <main id="main" className="mx-auto max-w-xl px-6 py-16">
       <h1 className="font-serif text-3xl mb-6 text-center">Create your profile</h1>
       <form onSubmit={onSubmit} className="space-y-6">
         <div>
-          <label className="block text-sm mb-2">Display name</label>
+          <label htmlFor="displayName" className="block text-sm mb-2">Display name</label>
           <input
+            id="displayName"
             className="w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
             placeholder="e.g. beachrunner"
             value={displayName}
@@ -67,7 +68,7 @@ export default function SignupPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-2">How do you describe yourself?</label>
+          <span className="block text-sm mb-2">How do you describe yourself?</span>
           <div className="grid grid-cols-2 gap-2">
             {(["Woman", "Man", "Non-binary", "Another"] as Identity[]).map((opt) => (
               <button
@@ -93,7 +94,7 @@ export default function SignupPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-2">Pronouns</label>
+          <span className="block text-sm mb-2">Pronouns</span>
           <div className="grid grid-cols-2 gap-2">
             {(["She/her", "He/him", "They/them", "Self describe"] as Pronouns[]).map((opt) => (
               <button
@@ -119,8 +120,9 @@ export default function SignupPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-2">Email (optional)</label>
+          <label htmlFor="email" className="block text-sm mb-2">Email (optional)</label>
           <input
+            id="email"
             type="email"
             className="w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
             placeholder="name@example.com"

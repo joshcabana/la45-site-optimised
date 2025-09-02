@@ -22,7 +22,6 @@ export default function ValueProps() {
   return (
     <section
       className="mx-auto max-w-6xl px-6 py-16 cv-auto"
-      role="region"
       aria-labelledby="vp-title"
     >
       <h2 id="vp-title" className="font-serif text-3xl mb-6">

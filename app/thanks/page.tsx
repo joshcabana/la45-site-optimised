@@ -9,7 +9,7 @@ export const metadata = { title: "Thanks | LA45" };
  */
 export default function ThanksPage() {
   return (
-    <main id="main-content" className="mx-auto max-w-xl px-6 py-24 space-y-6 text-center">
+    <main id="main" className="mx-auto max-w-xl px-6 py-24 space-y-6 text-center">
       <h1 className="font-serif text-3xl">Thank you ♥</h1>
       <p className="text-ink/80">
         Your support helps keep LA45 free while we grow. Wishing you many

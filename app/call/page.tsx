@@ -43,7 +43,7 @@ function CallInner() {
   const onEnd = () => router.push("/onboarding");
 
   return (
-    <main id="main-content" className="mx-auto max-w-4xl px-6 py-12 space-y-6 text-center">
+    <main id="main" className="mx-auto max-w-4xl px-6 py-12 space-y-6 text-center">
       <h1 className="font-serif text-3xl">Video call</h1>
       <p className="text-ink/80">
         Video calling is coming soon. This is a placeholder for the call

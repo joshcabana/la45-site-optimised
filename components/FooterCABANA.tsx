@@ -28,7 +28,7 @@ export default function FooterCABANA() {
             Terms
           </Link>
           <Link
-            href="/#safety"
+            href="/safety"
             className="hover:underline decoration-gold-500 underline-offset-4 hover:text-white"
           >
             Safety

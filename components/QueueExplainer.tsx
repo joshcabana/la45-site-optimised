@@ -9,7 +9,6 @@ export default function QueueExplainer() {
     <section
       id="how"
       className="mx-auto max-w-6xl px-6 py-16 scroll-mt-24 cv-auto"
-      role="region"
       aria-labelledby="how-title"
     >
       <h2 id="how-title" className="font-serif text-3xl mb-8">

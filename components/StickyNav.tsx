@@ -25,6 +25,18 @@ export default function StickyNav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Ensure the mobile menu closes if the viewport is resized to desktop
+  // dimensions. Without this, opening the menu on mobile and then rotating
+  // or resizing the device could leave the overlay visible on larger
+  // screens.
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 640) setMenuOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   // Close the mobile menu when navigating (e.g. clicking a hash link)
   const handleLinkClick = () => setMenuOpen(false);
 

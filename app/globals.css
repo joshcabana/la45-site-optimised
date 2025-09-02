@@ -72,7 +72,10 @@ video::-webkit-media-controls {
 
 /* Subtle glass backdrop used on nav/time pill */
 .glass {
+  /* Use the paper colour with transparency so the effect respects
+     light/dark themes. The first declaration acts as a fallback. */
   background: rgba(255, 255, 255, 0.7);
+  background: color-mix(in srgb, var(--color-paper) 70%, transparent);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
@@ -90,8 +93,11 @@ video::-webkit-media-controls {
   top: 100%;
   left: 0;
   right: 0;
+  /* Theme-aware colours for dark mode support */
   background: rgba(255, 255, 255, 0.95);
+  background: color-mix(in srgb, var(--color-paper) 95%, transparent);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
 }
 
 /* Hero gold vignette overlay (very subtle) */

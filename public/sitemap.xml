@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:3000/</loc></url>
+  <url><loc>http://localhost:3000/onboarding</loc></url>
+  <url><loc>http://localhost:3000/queue</loc></url>
+  <url><loc>http://localhost:3000/call</loc></url>
+  <url><loc>http://localhost:3000/guidelines</loc></url>
+  <url><loc>http://localhost:3000/privacy</loc></url>
+  <url><loc>http://localhost:3000/terms</loc></url>
+</urlset>
+

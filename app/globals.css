@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 /* Design tokens (luxury minimalism)
-   The ink/paper palette provides high contrast on both dark and light
-   surfaces, while gold delivers a subtle accent throughout the UI. */
+   The ink/paper palette provides high contrast while gold delivers a
+   subtle accent throughout the UI. */
 :root {
   --color-ink: #0B0B0B;
   --color-paper: #FFFFFF;
   /* Refined gold tone for a luxe feel */
   --color-gold-500: #C8A45D;
-}
-
-.dark {
-  --color-ink: #FFFFFF;
-  --color-paper: #0B0B0B;
 }
 
 html,
@@ -72,8 +67,6 @@ video::-webkit-media-controls {
 
 /* Subtle glass backdrop used on nav/time pill */
 .glass {
-  /* Use the paper colour with transparency so the effect respects
-     light/dark themes. The first declaration acts as a fallback. */
   background: rgba(255, 255, 255, 0.7);
   background: color-mix(in srgb, var(--color-paper) 70%, transparent);
   -webkit-backdrop-filter: blur(12px);
@@ -87,13 +80,28 @@ video::-webkit-media-controls {
   text-underline-offset: 4px;
 }
 
+/* Simple fade-in animation used for overlays */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-out both;
+}
+
 /* Mobile nav overlay: covers the width on small screens with a backdrop */
 .mobile-nav {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  /* Theme-aware colours for dark mode support */
   background: rgba(255, 255, 255, 0.95);
   background: color-mix(in srgb, var(--color-paper) 95%, transparent);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -106,6 +114,21 @@ video::-webkit-media-controls {
   background:
     radial-gradient(120% 90% at 50% 0%, rgba(200, 164, 93, 0.12), transparent 60%),
     radial-gradient(120% 90% at 50% 100%, rgba(200, 164, 93, 0.10), transparent 60%);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
 }
 
 /* Content-visibility helper for below-the-fold sections */

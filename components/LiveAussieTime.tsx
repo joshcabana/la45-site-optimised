@@ -6,7 +6,7 @@ import { detectAussieTimeZone } from "./utils/formatters";
 /**
  * LiveAussieTime shows the current time and date in the user’s Australian
  * timezone. It updates once per minute and uses a pill style for
- * readability on dark backgrounds. Hidden on small screens to save space.
+ * readability. Hidden on small screens to save space.
  */
 export default function LiveAussieTime() {
   const [now, setNow] = useState<Date>(() => new Date());

@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import LiveAussieTime from "./LiveAussieTime";
-import ThemeToggle from "./ThemeToggle";
 
 /**
  * StickyNav renders a fixed header that becomes opaque on scroll and
@@ -61,7 +60,6 @@ export default function StickyNav() {
           <div className="hidden sm:block">
             <LiveAussieTime />
           </div>
-          <ThemeToggle />
           {/* Mobile menu toggle button. Hidden on ≥sm screens */}
           <button
             className="sm:hidden p-2 text-ink/80 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
@@ -101,7 +99,7 @@ export default function StickyNav() {
         <div
           id="primary-navigation"
           className={`${
-            menuOpen ? "flex flex-col mobile-nav p-4 gap-4 sm:gap-3" : "hidden"
+            menuOpen ? "flex flex-col mobile-nav fade-in p-4 gap-4 sm:gap-3" : "hidden"
           } sm:flex sm:flex-row sm:static sm:p-0 sm:gap-3 items-center`}
           role="menu"
           aria-label="Primary navigation links"
@@ -112,13 +110,6 @@ export default function StickyNav() {
             className="text-sm hover:underline decoration-gold-500 underline-offset-4"
           >
             How it works
-          </Link>
-          <Link
-            href="/signup"
-            onClick={handleLinkClick}
-            className="text-sm hover:underline decoration-gold-500 underline-offset-4"
-          >
-            Tokens
           </Link>
           <Link
             href="/#safety"

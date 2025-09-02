@@ -3,7 +3,6 @@ import { headers } from "next/headers";
 import "./globals.css";
 import StickyNav from "@/components/StickyNav";
 import { Inter, Playfair_Display } from "next/font/google";
-import Script from "next/script";
 
 // Preload our chosen fonts and expose the CSS variables so they can be
 // referenced in components and Tailwind. Display swap avoids flashes of
@@ -76,20 +75,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // the <body> so that Tailwind classes apply globally.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-AU" suppressHydrationWarning>
-      <head>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {`
-            try {
-              var stored = localStorage.getItem('theme');
-              var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              if (stored === 'dark' || (!stored && prefersDark)) {
-                document.documentElement.classList.add('dark');
-              }
-            } catch (e) {}
-          `}
-        </Script>
-      </head>
+    <html lang="en-AU">
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
         {/* Accessible skip link appears on focus and moves keyboard users
             directly to the main content area. */}

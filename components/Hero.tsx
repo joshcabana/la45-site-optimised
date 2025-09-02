@@ -65,7 +65,7 @@ export default function Hero() {
       {/* subtle gold vignette for a luxe feel */}
       <div className="absolute inset-0 hero-gold-vignette" aria-hidden />
 
-      <div className="relative z-10 text-center px-6 max-w-3xl">
+      <div className="relative z-10 text-center px-6 max-w-3xl fade-in-up">
         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold-500/15 text-gold-500 text-xs border border-gold-500/30">
           Beta now open
         </span>

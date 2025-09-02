@@ -1,3 +1,5 @@
+"use client";
+
 export default function QueueExplainer() {
   const items = [
     { title: "Join the live queue", body: "Hop in when you’re ready—no endless feeds." },

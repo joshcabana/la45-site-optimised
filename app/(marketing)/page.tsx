@@ -1,13 +1,58 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import DonationMount from "@/components/DonationMount";
-import ValueProps from "@/components/ValueProps";
-import QueueExplainer from "@/components/QueueExplainer";
-import SafetyAnonymity from "@/components/SafetyAnonymity";
-import SocialProof from "@/components/SocialProof";
-import FAQ from "@/components/FAQ";
-import FooterCABANA from "@/components/FooterCABANA";
 import StructuredData from "@/components/StructuredData";
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+
+const ValueProps = dynamic(() => import("@/components/ValueProps"), {
+  ssr: false,
+<<<<<<< ours
+  loading: () => <div className="min-h-[400px]" />,
+});
+const QueueExplainer = dynamic(() => import("@/components/QueueExplainer"), {
+  ssr: false,
+  loading: () => <div className="min-h-[400px]" />,
+});
+const SafetyAnonymity = dynamic(() => import("@/components/SafetyAnonymity"), {
+  ssr: false,
+  loading: () => <div className="min-h-[400px]" />,
+});
+const SocialProof = dynamic(() => import("@/components/SocialProof"), {
+  ssr: false,
+  loading: () => <div className="min-h-[400px]" />,
+});
+const FAQ = dynamic(() => import("@/components/FAQ"), {
+  ssr: false,
+  loading: () => <div className="min-h-[800px]" />,
+});
+const FooterCABANA = dynamic(() => import("@/components/FooterCABANA"), {
+  ssr: false,
+  loading: () => <div className="min-h-[300px]" />,
+=======
+  loading: () => <div className="min-h-[32rem]" />,
+});
+const QueueExplainer = dynamic(() => import("@/components/QueueExplainer"), {
+  ssr: false,
+  loading: () => <div className="min-h-[28rem]" />,
+});
+const SafetyAnonymity = dynamic(() => import("@/components/SafetyAnonymity"), {
+  ssr: false,
+  loading: () => <div className="min-h-[28rem]" />,
+});
+const SocialProof = dynamic(() => import("@/components/SocialProof"), {
+  ssr: false,
+  loading: () => <div className="min-h-[24rem]" />,
+});
+const FAQ = dynamic(() => import("@/components/FAQ"), {
+  ssr: false,
+  loading: () => <div className="min-h-[60rem]" />,
+});
+const FooterCABANA = dynamic(() => import("@/components/FooterCABANA"), {
+  ssr: false,
+  loading: () => <div className="min-h-[20rem]" />,
+>>>>>>> theirs
+});
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },

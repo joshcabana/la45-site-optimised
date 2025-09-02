@@ -31,14 +31,14 @@ export default function AnalyticsConsent() {
             <button
               type="button"
               onClick={allow}
-              className="px-3 py-1 rounded bg-gold-500 text-ink"
+              className="px-3 py-1 rounded bg-gold-500 text-ink focus-visible:ring-2 focus-visible:ring-gold-500"
             >
               Allow
             </button>
             <button
               type="button"
               onClick={deny}
-              className="px-3 py-1 rounded border"
+              className="px-3 py-1 rounded border focus-visible:ring-2 focus-visible:ring-gold-500"
             >
               Decline
             </button>

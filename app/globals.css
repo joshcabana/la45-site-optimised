@@ -12,6 +12,11 @@
   --color-gold-500: #C8A45D;
 }
 
+.dark {
+  --color-ink: #FFFFFF;
+  --color-paper: #0B0B0B;
+}
+
 html,
 body {
   height: 100%;

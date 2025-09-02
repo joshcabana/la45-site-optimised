@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import LiveAussieTime from "./LiveAussieTime";
+import ThemeToggle from "./ThemeToggle";
 
 /**
  * StickyNav renders a fixed header that becomes opaque on scroll and
@@ -48,6 +49,7 @@ export default function StickyNav() {
           <div className="hidden sm:block">
             <LiveAussieTime />
           </div>
+          <ThemeToggle />
           {/* Mobile menu toggle button. Hidden on ≥sm screens */}
           <button
             className="sm:hidden p-2 text-ink/80 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"

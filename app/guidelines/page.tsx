@@ -5,46 +5,50 @@ export const metadata = { title: "Community Guidelines | LA45" };
  * respectful environment is fundamental to meaningful connections. By
  * participating in LA45 you agree to abide by these simple rules.
  */
+import StructuredData from "@/components/StructuredData";
+
 export default function GuidelinesPage() {
   return (
     <main id="main" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
+      <StructuredData />
       <h1 className="font-serif text-3xl mb-4">Community Guidelines</h1>
       <p className="text-ink/80">
         LA45 is a place for kindness, curiosity and authentic connections. To
-        protect our community we ask every participant to follow these
-        principles:
+        protect our community, you must follow these rules:
       </p>
       <ul className="list-disc list-inside space-y-3 text-ink/80">
         <li>
-          <strong>Be respectful:</strong> Treat others as you’d like to be treated. No hate
-          speech, harassment, discrimination or abusive language.
+          <strong>Be respectful:</strong> No harassment, hate, threats, discrimination or abusive
+          language. Treat others as you’d like to be treated.
         </li>
         <li>
-          <strong>Consent matters:</strong> Only reveal personal information when both parties
-          agree. Do not pressure others to share details or to continue a call.
+          <strong>Consent matters:</strong> Only share personal information when both people agree.
+          Do not pressure anyone to reveal details or continue a call.
         </li>
         <li>
-          <strong>No indecency:</strong> Keep conversations and appearances appropriate. Nudity,
-          sexual content and explicit behaviour are prohibited.
+          <strong>No indecency:</strong> Nudity, sexual content and explicit behaviour are
+          prohibited. Do not use LA45 while driving or in unsafe situations.
         </li>
         <li>
-          <strong>No recording or screenshots:</strong> Respect the privacy of your match. Capturing
-          audio, video or images of calls is strictly forbidden.
+          <strong>No recording or screenshots:</strong> Respect privacy. Capturing audio, video or
+          images of calls is strictly forbidden.
         </li>
         <li>
-          <strong>Report issues:</strong> Use the built‑in Block/Report tools if someone behaves
-          inappropriately. Our moderators review reports quickly and take
-          appropriate action.
+          <strong>Keep it safe:</strong> No doxxing, spam/scams, or illegal content/activity.
         </li>
         <li>
-          <strong>Age requirement:</strong> LA45 is for adults 18+ only. Do not use the service if
-          you are underage.
+          <strong>Report issues:</strong> Use Block/Report during or after a call. We review
+          reports quickly and enforce the rules.
+        </li>
+        <li>
+          <strong>18+ only:</strong> You must be 18 or older. Age verification may be required.
         </li>
       </ul>
       <p className="text-ink/60 text-sm">
-        Failure to follow these guidelines may result in temporary or permanent
-        suspension. We reserve the right to remove any content or user who
-        jeopardises the safety of the community.
+        Breaches may result in temporary suspension, permanent account bans,
+        <strong> device‑level bans</strong>, and IP‑based access restrictions. For serious harms we may
+        notify the eSafety Commissioner or law enforcement. These guidelines
+        work alongside our <a href="/terms" className="gold-underline">Terms</a> and <a href="/privacy" className="gold-underline">Privacy</a>.
       </p>
     </main>
   );

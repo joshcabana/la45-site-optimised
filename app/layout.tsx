@@ -3,20 +3,16 @@ import "./globals.css";
 import StickyNav from "@/components/StickyNav";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { fontVars } from "./fonts";
 
 
 // Determine the site's base URL. Prefer NEXT_PUBLIC_SITE_URL but fall back to
 // the deployment URL (e.g. Vercel) or a reasonable default.
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://la45.example");
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://la45.app");
 
-// Load fonts via next/font and expose as CSS variables that Tailwind maps to
-// font-sans / font-serif families. This avoids any runtime network requests
-// for font CSS and enables font-display:swap by default.
-const fontSans = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
-const fontSerif = Playfair_Display({ subsets: ["latin"], display: "swap", variable: "--font-serif" });
+// Fonts are loaded via app/fonts.ts and applied as CSS variables on <html>.
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -50,13 +46,13 @@ export const metadata: Metadata = {
 // that Tailwind classes apply globally.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-AU">
-      <body className={`${fontSans.variable} ${fontSerif.variable} font-sans`}>
+    <html lang="en-AU" className={`${fontVars}`}>
+      <body className={`min-h-full font-sans antialiased bg-black text-zinc-100`}>
         {/* Accessible skip link appears on focus and moves keyboard users
             directly to the main content area. */}
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:px-3 focus:py-2 focus:bg-black focus:text-white"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:px-3 focus-visible:py-2 focus-visible:bg-black focus-visible:text-white focus-visible:ring-2 focus-visible:ring-gold-500"
         >
           Skip to main content
         </a>

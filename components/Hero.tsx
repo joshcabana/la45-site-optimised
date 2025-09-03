@@ -22,7 +22,7 @@ export default function Hero() {
   };
   return (
     <section
-      className="relative min-h-[70vh] md:min-h-[80vh] overflow-hidden px-4"
+      className="relative min-h-svh md:min-h-[82vh] overflow-hidden px-4"
       aria-labelledby="hero-title"
     >
       <div className="absolute inset-0" aria-hidden>
@@ -31,7 +31,8 @@ export default function Hero() {
           alt="LA45 hero"
           fill
           priority
-          placeholder="empty"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMzAnIGhlaWdodD0nMjAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJhZGlhbEdyYWRpZW50IGlkPSdnJyBjeD0nNTAlJyBjeT0nNTAlJyByPSc1MCUnPjxzdG9wIHN0b3AtY29sb3I9JyMwMDAwMDAnIG9mZnNldD0nMCUnIC8+PHN0b3Agc3RvcC1jb2xvcj0nIzEwMTAxMCcgb2Zmc2V0PScxMDAlJyAvPjwvcmFkaWFsR3JhZGllbnQ+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScgLz48L3N2Zz4="
           sizes="(max-width: 768px) 100vw, 1200px"
           className="object-cover"
         />
@@ -80,7 +81,7 @@ export default function Hero() {
             <Link
               href="/signup"
               onClick={() => gaEvent("signup_click")}
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gold-500 text-ink font-medium hover:opacity-95 focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-full bg-gold-500 text-ink font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
             >
               Try a live demo
             </Link>

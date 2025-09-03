@@ -6,6 +6,13 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}"
   ],
+  safelist: [
+    // Ensure focus ring utilities are retained in production builds
+    "focus-visible:ring-2",
+    "focus-visible:ring-gold-500",
+    "focus-visible:ring-offset-2",
+    "focus-visible:outline-none",
+  ],
   theme: {
     extend: {
       colors: {
@@ -16,9 +23,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // Mapped to next/font variables defined in app/layout.tsx
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
-        serif: ["var(--font-serif)", "ui-serif", "Georgia"],
+        // Mapped to next/font variables defined in app/fonts.ts
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-playfair)", "ui-serif", "Georgia"],
       },
     },
   },

@@ -5,46 +5,25 @@ export const metadata = { title: "Terms of Service | LA45" };
  * LA45. They explain eligibility, the role of tokens and limitations of
  * liability. These highlights provide clarity but are not exhaustive.
  */
+import StructuredData from "@/components/StructuredData";
+
 export default function TermsPage() {
   return (
     <main id="main" className="mx-auto max-w-3xl px-6 py-24 space-y-6">
+      <StructuredData />
       <h1 className="font-serif text-3xl mb-4">Terms of Service</h1>
-      <p className="text-ink/80">
-        By accessing or using LA45 you agree to these terms. Please read them
-        carefully.
-      </p>
+      <p className="text-ink/80">By using LA45 you agree to these terms.</p>
       <ul className="list-disc list-inside space-y-3 text-ink/80">
-        <li>
-          <strong>Eligibility:</strong> You must be at least 18 years old and able to form a
-          legally binding contract to use LA45. You are responsible for
-          compliance with your local laws.
-        </li>
-        <li>
-          <strong>Tokens:</strong> Tokens provide access to calls and optional extensions. They
-          are a licence to use the service and have no monetary value outside
-          LA45. Tokens are non‑refundable and may expire at our discretion.
-        </li>
-        <li>
-          <strong>Beta disclaimer:</strong> LA45 is currently in beta. Features may change,
-          fail or be removed without notice. We do not guarantee that you will
-          find a match or that the service will meet your expectations.
-        </li>
-        <li>
-          <strong>User conduct:</strong> You are responsible for your interactions. Follow our
-          Community Guidelines. We are not liable for the behaviour of other
-          users, but we will enforce the rules and respond to reports.
-        </li>
-        <li>
-          <strong>Limitations of liability:</strong> To the maximum extent permitted by law, LA45
-          and its operators are not liable for indirect, incidental or
-          consequential damages arising from your use of the service.
-        </li>
+        <li><strong>Eligibility:</strong> 18+ only. You must be able to form a legally binding contract.</li>
+        <li><strong>Acceptable use:</strong> Follow the Community Guidelines. No illegal activity, harassment, or unsafe behaviour.</li>
+        <li><strong>No recordings:</strong> Do not record or screenshot calls.</li>
+        <li><strong>Tokens:</strong> During beta, tokens are non‑refundable and have no cash value. They may be adjusted or withdrawn.</li>
+        <li><strong>Service availability:</strong> LA45 is provided “as‑is” during beta. Features may change or be removed.</li>
+        <li><strong>Termination:</strong> We may suspend or terminate accounts for breaches, including device‑level and IP‑based restrictions.</li>
+        <li><strong>ACL:</strong> Nothing in these terms limits your rights under the Australian Consumer Law.</li>
+        <li><strong>Governing law:</strong> New South Wales (or ACT) law governs these terms. Disputes may be raised via <a href="mailto:hello@la45.app" className="gold-underline">hello@la45.app</a>.</li>
       </ul>
-      <p className="text-ink/60 text-sm">
-        These highlights summarise the key points. The full legal terms
-        apply and may be updated periodically. Continued use of the service
-        constitutes acceptance of any revised terms.
-      </p>
+      <p className="text-ink/60 text-sm">Last updated: {new Date().toLocaleDateString("en-AU")}.</p>
     </main>
   );
 }

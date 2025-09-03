@@ -50,7 +50,7 @@ export default function StickyNav() {
       className={`fixed top-0 inset-x-0 z-50 transition-all ${
         scrolled ? "glass backdrop-saturate-150 border-b border-[rgba(200,164,93,0.25)]" : "bg-transparent"
       }`}
-      aria-label="Primary navigation"
+      aria-label="Primary"
     >
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <Link
@@ -72,7 +72,7 @@ export default function StickyNav() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            aria-controls="primary-navigation"
+            aria-controls="primary-menu"
           >
             {menuOpen ? (
               // X icon
@@ -103,31 +103,29 @@ export default function StickyNav() {
         </div>
         {/* Navigation links */}
         <div
-          id="primary-navigation"
+          id="primary-menu"
           className={`${
-            menuOpen ? "flex flex-col mobile-nav fade-in p-4 gap-4 sm:gap-3" : "hidden"
-          } sm:flex sm:flex-row sm:static sm:p-0 sm:gap-3 items-center`}
-          role="menu"
-          aria-label="Primary navigation links"
+            menuOpen ? "flex flex-col mobile-nav fade-in p-4 gap-4 md:gap-3" : "hidden"
+          } md:flex md:flex-row md:static md:p-0 md:gap-3 items-center`}
         >
           <Link
             href="/#how"
             onClick={handleLinkClick}
-            className="text-sm hover:underline decoration-gold-500 underline-offset-4"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             How it works
           </Link>
           <Link
             href="/#safety"
             onClick={handleLinkClick}
-            className="text-sm hover:underline decoration-gold-500 underline-offset-4"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             Safety
           </Link>
           <Link
             href="/#faq"
             onClick={handleLinkClick}
-            className="text-sm hover:underline decoration-gold-500 underline-offset-4"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             FAQ
           </Link>
@@ -137,7 +135,7 @@ export default function StickyNav() {
               gaEvent("signup_click");
               handleLinkClick();
             }}
-            className="text-sm hover:underline decoration-gold-500 underline-offset-4"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             Sign up
           </Link>
@@ -147,7 +145,7 @@ export default function StickyNav() {
               gaEvent("enter_queue_click");
               handleLinkClick();
             }}
-            className="sm:ml-2 inline-flex items-center px-4 py-2 rounded-full bg-gold-500 text-ink text-sm font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="md:ml-2 inline-flex items-center px-4 py-2 min-h-[44px] rounded-full bg-gold-500 text-ink text-sm font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             Enter the queue
           </Link>

@@ -2,23 +2,25 @@
 
 export default function StructuredData() {
   const base =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://la45-site-optimised.vercel.app";
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://la45.app");
   const org = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'LA45',
     url: base,
     logo: `${base}/logo.png`,
-  };
-  const app = {
+    slogan: '45-second live speed-dates',
+    description: 'Live video speed dates. Anonymous until you both match.',
+  } as const;
+  const site = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    '@type': 'WebSite',
     name: 'LA45',
-    applicationCategory: 'DatingApplication',
-    operatingSystem: 'Web',
+    url: base,
     inLanguage: 'en-AU',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
-  };
+    description: '45-second live speed-dates',
+  } as const;
   return (
     <>
       <script
@@ -27,7 +29,7 @@ export default function StructuredData() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(app) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(site) }}
       />
     </>
   );

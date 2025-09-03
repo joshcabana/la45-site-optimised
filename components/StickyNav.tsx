@@ -48,7 +48,9 @@ export default function StickyNav() {
     <nav
       ref={ref}
       className={`fixed top-0 inset-x-0 z-50 transition-all ${
-        scrolled ? "glass backdrop-saturate-150 border-b border-[rgba(200,164,93,0.25)]" : "bg-transparent"
+        scrolled
+          ? "backdrop-blur-md bg-paper/80 dark:bg-ink/70 border-b border-ink/10 dark:border-paper/10"
+          : "bg-transparent"
       }`}
       aria-label="Primary"
     >
@@ -56,7 +58,7 @@ export default function StickyNav() {
         <Link
           href="/"
           onClick={handleLinkClick}
-          className="font-serif text-xl tracking-tight hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+          className="font-serif text-xl tracking-tight hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           LA45
         </Link>
@@ -68,7 +70,7 @@ export default function StickyNav() {
           {/* Mobile menu toggle button. Hidden on ≥sm screens */}
           <button
             type="button"
-            className="sm:hidden p-2 text-ink/80 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="sm:hidden p-2 min-h-[44px] text-ink/80 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -109,23 +111,23 @@ export default function StickyNav() {
           } md:flex md:flex-row md:static md:p-0 md:gap-3 items-center`}
         >
           <Link
-            href="/#how"
+            href="/how-it-works"
             onClick={handleLinkClick}
-            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             How it works
           </Link>
           <Link
-            href="/#safety"
+            href="/safety"
             onClick={handleLinkClick}
-            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             Safety
           </Link>
           <Link
-            href="/#faq"
+            href="/faq"
             onClick={handleLinkClick}
-            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             FAQ
           </Link>
@@ -135,7 +137,7 @@ export default function StickyNav() {
               gaEvent("signup_click");
               handleLinkClick();
             }}
-            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold-500 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="text-sm py-2 min-h-[44px] hover:underline decoration-gold underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             Sign up
           </Link>
@@ -145,7 +147,7 @@ export default function StickyNav() {
               gaEvent("enter_queue_click");
               handleLinkClick();
             }}
-            className="md:ml-2 inline-flex items-center px-4 py-2 min-h-[44px] rounded-full bg-gold-500 text-ink text-sm font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="md:ml-2 inline-flex items-center px-4 py-2 min-h-[44px] rounded-full bg-gold text-ink text-sm font-medium hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             Enter the queue
           </Link>

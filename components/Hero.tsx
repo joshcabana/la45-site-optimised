@@ -54,7 +54,7 @@ export default function Hero() {
           type="button"
           onClick={handlePlay}
           aria-label="Play hero video"
-          className="absolute inset-0 z-20 flex items-center justify-center bg-black/40 text-white focus-visible:ring-2 focus-visible:ring-gold"
+          className="absolute inset-0 z-20 flex items-center justify-center bg-ink/40 text-paper focus-visible:ring-2 focus-visible:ring-gold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/70 via-paper/40 to-paper" aria-hidden />
     </section>
   );
 }

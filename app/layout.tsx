@@ -4,6 +4,7 @@ import StickyNav from "@/components/StickyNav";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { fontVars } from "./fonts";
+import WebVitalsRUM from "@/components/WebVitalsRUM";
 
 
 // Determine the site's base URL. Prefer NEXT_PUBLIC_SITE_URL but fall back to
@@ -62,6 +63,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SpeedInsights />
         {/* Cookie/analytics consent modal (Analytics is gated within) */}
         <AnalyticsConsent />
+        {/* Front-end only RUM for Core Web Vitals */}
+        <WebVitalsRUM />
       </body>
     </html>
   );

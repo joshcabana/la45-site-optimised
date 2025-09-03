@@ -26,6 +26,15 @@ export default function useInView<T extends Element>(
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   });
 
+  // Prepare a throttled fallback reader that uses ref.current at call time
+  const throttledRead = useThrottle(() => {
+    const el = ref.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.top < vh * 0.8) setReveal(true);
+  }, 120);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -37,34 +46,26 @@ export default function useInView<T extends Element>(
       return;
     }
 
-    let io: IntersectionObserver | null = null;
-    try {
-      io = new IntersectionObserver(([entry]) => {
+    if (typeof IntersectionObserver !== "undefined") {
+      const io = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setReveal(true);
-          io && io.disconnect();
+          io.disconnect();
         }
       }, options);
       io.observe(el);
-    } catch {
-      // Fallback: use throttled scroll listener
-      const onScroll = useThrottle(() => {
-        const rect = el.getBoundingClientRect();
-        const vh = window.innerHeight || document.documentElement.clientHeight;
-        if (rect.top < vh * 0.8) setReveal(true);
-      }, 120);
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-      window.addEventListener("resize", onScroll);
-      return () => {
-        window.removeEventListener("scroll", onScroll);
-        window.removeEventListener("resize", onScroll);
-      };
+      return () => io.disconnect();
     }
 
-    return () => io && io.disconnect();
-  }, [options.root, options.rootMargin, options.threshold]);
+    // Fallback: throttled scroll/resize listeners
+    throttledRead();
+    window.addEventListener("scroll", throttledRead, { passive: true });
+    window.addEventListener("resize", throttledRead);
+    return () => {
+      window.removeEventListener("scroll", throttledRead);
+      window.removeEventListener("resize", throttledRead);
+    };
+  }, [options, throttledRead]);
 
   return { ref, reveal } as const;
 }
-

@@ -32,7 +32,7 @@ export default function QueueStats() {
         {stats.labels.map((l, i) => (
           <div key={l} className="text-center">
             <div
-              className="mx-auto h-20 w-6 rounded bg-gold-500/70"
+              className="mx-auto h-20 w-6 rounded bg-gold/70"
               style={{ height: `${Math.max(8, Math.min(80, stats.counts[i]))}px` }}
               aria-hidden
             />
@@ -43,4 +43,3 @@ export default function QueueStats() {
     </section>
   );
 }
-

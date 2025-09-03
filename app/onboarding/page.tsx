@@ -55,7 +55,7 @@ export default function OnboardingPage() {
                 setIsAdult(true);
                 setStep("rules");
               }}
-              className="rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
             >
               Yes
             </button>
@@ -64,7 +64,7 @@ export default function OnboardingPage() {
                 setIsAdult(false);
                 alert("You must be 18+ to use this service.");
               }}
-              className="rounded-full border border-ink/20 px-6 py-3 text-ink hover:border-ink/40 focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full border border-ink/20 px-6 py-3 min-h-[44px] text-ink hover:border-ink/40 focus-visible:ring-2 focus-visible:ring-gold"
             >
               No
             </button>
@@ -84,14 +84,14 @@ export default function OnboardingPage() {
               type="checkbox"
               checked={rulesAccepted}
               onChange={(e) => setRulesAccepted(e.target.checked)}
-              className="h-5 w-5 accent-gold-500"
+              className="h-5 w-5 accent-gold"
             />
             <span>I accept the rules</span>
           </label>
           <button
             onClick={() => setStep("handle")}
             disabled={!rulesAccepted}
-            className="mt-4 rounded-full bg-gold-500 text-ink px-6 py-3 disabled:opacity-50 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="mt-4 rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] disabled:opacity-50 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
           >
             Continue
           </button>
@@ -106,7 +106,7 @@ export default function OnboardingPage() {
             value={handle}
             onChange={(e) => setHandle(e.target.value)}
             placeholder="e.g. beachrunner"
-            className="w-full rounded-xl bg-black/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="w-full rounded-xl bg-ink/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
           />
           <p className="text-ink/60 text-sm">
             Share real details only after a mutual match.
@@ -114,7 +114,7 @@ export default function OnboardingPage() {
           <button
             onClick={() => setStep("device")}
             disabled={!handle}
-            className="rounded-full bg-gold-500 text-ink px-6 py-3 disabled:opacity-50 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] disabled:opacity-50 hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
           >
             Continue
           </button>
@@ -130,7 +130,7 @@ export default function OnboardingPage() {
           </p>
           <button
             onClick={() => setStep("done")}
-            className="rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+            className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
           >
             Run test
           </button>
@@ -148,14 +148,14 @@ export default function OnboardingPage() {
             <Link
               href="/queue?guest=1"
               onClick={() => gaEvent("enter_queue_click")}
-              className="rounded-full bg-gold-500 text-ink px-6 py-3 text-center hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] text-center hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
             >
               Continue as guest (limited)
             </Link>
             <Link
               href="/queue"
               onClick={() => gaEvent("enter_queue_click")}
-              className="rounded-full border border-ink/20 px-6 py-3 text-center hover:border-ink/40 focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full border border-ink/20 px-6 py-3 min-h-[44px] text-center hover:border-ink/40 focus-visible:ring-2 focus-visible:ring-gold"
             >
               Sign in to join queue
             </Link>

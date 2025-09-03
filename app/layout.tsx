@@ -17,19 +17,19 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "LA45 — 45‑second live dates", template: "%s · LA45" },
+  title: { default: "LA45 — 45‑second live speed‑dates", template: "%s · LA45" },
   description: "Live video speed dates. Anonymous until you both match.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    title: "LA45",
+    title: "LA45 — 45‑second live speed‑dates",
     siteName: "LA45",
     description: "Live video speed dates.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LA45",
+    title: "LA45 — 45‑second live speed‑dates",
     description: "Live video speed dates.",
   },
   manifest: "/manifest.webmanifest",
@@ -48,12 +48,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-AU" className={`${fontVars}`}>
-      <body className={`min-h-full font-sans antialiased bg-black text-zinc-100`}>
+      <body className={`min-h-full font-sans antialiased bg-paper text-ink`}>
         {/* Accessible skip link appears on focus and moves keyboard users
             directly to the main content area. */}
         <a
           href="#main"
-          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:px-3 focus-visible:py-2 focus-visible:bg-black focus-visible:text-white focus-visible:ring-2 focus-visible:ring-gold-500"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:px-3 focus-visible:py-2 focus-visible:bg-ink focus-visible:text-paper focus-visible:ring-2 focus-visible:ring-gold"
         >
           Skip to main content
         </a>

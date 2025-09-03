@@ -26,7 +26,7 @@ export default function DonationRibbon() {
     <div
       role="region"
       aria-label="Support LA45"
-      className="sticky top-0 z-40 border-b border-[rgba(200,164,93,0.25)] bg-white/60 backdrop-blur"
+      className="sticky top-0 z-40 border-b border-gold/25 bg-paper/60 backdrop-blur"
     >
       <form className="mx-auto grid max-w-5xl items-center gap-3 px-4 py-2 sm:grid-cols-[1fr_auto_auto]">
         <fieldset className="contents">
@@ -56,7 +56,7 @@ export default function DonationRibbon() {
               type="button"
               onClick={confirm}
               disabled={amount == null}
-              className="rounded-full bg-gold-500 text-ink px-3 py-1 text-xs disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full bg-gold text-ink px-3 py-1 text-xs min-h-[44px] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               Donate
             </button>
@@ -64,7 +64,7 @@ export default function DonationRibbon() {
               type="button"
               aria-label="Hide support prompt"
               onClick={hide}
-              className="text-xs opacity-60 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded"
+              className="text-xs opacity-60 hover:opacity-100 min-h-[44px] px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
             >
               Hide
             </button>

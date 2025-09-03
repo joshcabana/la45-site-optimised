@@ -6,10 +6,10 @@
    The ink/paper palette provides high contrast while gold delivers a
    subtle accent throughout the UI. */
 :root {
-  --color-ink: #0B0B0B;
-  --color-paper: #FFFFFF;
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
   /* Refined gold tone for a luxe feel */
-  --color-gold-500: #C8A45D;
+  --color-gold-500: #D4AF37;
 }
 
 html,
@@ -21,21 +21,14 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Subtle maison-style pattern overlay for a luxury vibe */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(200, 164, 93, 0.05) 0px,
-      rgba(200, 164, 93, 0.05) 1px,
-      transparent 1px,
-      transparent 24px
-    );
-  opacity: 0.15;
+/* Dark mode: invert ink/paper for high contrast */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-ink: #ffffff;
+    --color-paper: #0a0a0a;
+    /* keep gold consistent in dark */
+    --color-gold-500: #D4AF37;
+  }
 }
 
 * {

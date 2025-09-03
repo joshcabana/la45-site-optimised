@@ -129,7 +129,7 @@ function QueueInner() {
           enter();
         }}
         disabled={loading}
-        className="rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-gold-500"
+        className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] hover:opacity-90 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-gold"
       >
         {loading ? "Looking for a match…" : "Enter"}
       </button>

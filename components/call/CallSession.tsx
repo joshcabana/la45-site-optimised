@@ -23,7 +23,7 @@ export default function CallSession({ roomId, userId, userName, onEnd }: CallSes
       <p className="text-ink/60 text-sm">Room: {roomId}</p>
       <button
         onClick={onEnd}
-        className="rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+        className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
       >
         End call
       </button>

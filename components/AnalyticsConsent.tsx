@@ -58,7 +58,7 @@ export default function AnalyticsConsent() {
       {consent === null && (
         <div
           aria-hidden="false"
-          className="fixed inset-0 z-50 grid place-items-center bg-black/50"
+          className="fixed inset-0 z-50 grid place-items-center bg-ink/50"
         >
           <div
             ref={modalRef}
@@ -67,7 +67,7 @@ export default function AnalyticsConsent() {
             aria-labelledby="consent-title"
             aria-describedby="consent-desc"
             tabIndex={-1}
-            className="w-[min(92vw,28rem)] rounded-lg bg-white p-5 shadow-xl fade-in"
+            className="w-[min(92vw,28rem)] rounded-lg bg-paper p-5 shadow-xl fade-in"
           >
             <h2 id="consent-title" className="mb-2 text-lg font-semibold">Allow analytics cookies?</h2>
             <p id="consent-desc" className="mb-4 text-sm text-ink/80">
@@ -78,7 +78,7 @@ export default function AnalyticsConsent() {
                 ref={firstBtnRef}
                 type="button"
                 onClick={deny}
-                className="px-3 py-2 rounded border focus-visible:ring-2 focus-visible:ring-gold-500"
+                className="px-3 py-2 min-h-[44px] rounded border focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Decline
               </button>
@@ -86,7 +86,7 @@ export default function AnalyticsConsent() {
                 ref={lastBtnRef}
                 type="button"
                 onClick={allow}
-                className="px-3 py-2 rounded bg-gold-500 text-ink focus-visible:ring-2 focus-visible:ring-gold-500"
+                className="px-3 py-2 min-h-[44px] rounded bg-gold text-ink focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Allow
               </button>

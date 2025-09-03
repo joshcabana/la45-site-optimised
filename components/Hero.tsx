@@ -28,7 +28,8 @@ export default function Hero() {
       <div className="absolute inset-0" aria-hidden>
         <Image
           src="/photos/hero-poster.jpg"
-          alt="LA45 hero"
+          alt=""
+          aria-hidden
           fill
           priority
           placeholder="blur"
@@ -54,7 +55,7 @@ export default function Hero() {
           type="button"
           onClick={handlePlay}
           aria-label="Play hero video"
-          className="absolute inset-0 z-20 flex items-center justify-center bg-black/40 text-white focus-visible:ring-2 focus-visible:ring-gold-500"
+          className="absolute inset-0 z-20 flex items-center justify-center bg-ink/40 text-paper focus-visible:ring-2 focus-visible:ring-gold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,23 +73,29 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 flex items-center justify-center">
         <div className="text-center px-6 max-w-3xl">
           <h1 id="hero-title" className="font-serif text-[clamp(2rem,5vw,3.5rem)] leading-tight">
-            45 seconds to spark something.
+            45-second live speed-dates
           </h1>
           <p className="mt-3 text-ink/80">
             Live video speed dates. Anonymous until you both match.
           </p>
-          <div className="mt-8 flex items-center justify-center">
+          <div className="mt-8 flex items-center justify-center gap-6">
             <Link
               href="/signup"
               onClick={() => gaEvent("signup_click")}
-              className="inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg bg-gold-500 text-ink font-medium hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg bg-gold text-ink font-medium hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
-              Try a live demo
+              Get started
+            </Link>
+            <Link
+              href="/#how-it-works"
+              className="inline-flex items-center justify-center px-2 py-1 min-h-[44px] font-medium underline-offset-4 hover:underline"
+            >
+              How it works
             </Link>
           </div>
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-white" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/70 via-paper/40 to-paper" aria-hidden />
     </section>
   );
 }

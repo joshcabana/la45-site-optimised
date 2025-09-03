@@ -17,7 +17,7 @@ export default function ThanksPage() {
       </p>
       <Link
         href="/"
-        className="rounded-full bg-gold-500 text-ink px-6 py-3 inline-block hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+        className="rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] inline-block hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
       >
         Back to Home
       </Link>

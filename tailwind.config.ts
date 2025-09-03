@@ -16,8 +16,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui"],
-        serif: ["ui-serif", "Georgia"],
+        // Mapped to next/font variables defined in app/layout.tsx
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia"],
       },
     },
   },
@@ -25,4 +26,3 @@ const config: Config = {
 };
 
 export default config;
-

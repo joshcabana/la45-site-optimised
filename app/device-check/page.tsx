@@ -32,8 +32,8 @@ export default function DeviceCheckPage() {
         const cams = devices.filter((d) => d.kind === "videoinput").length;
         const mics = devices.filter((d) => d.kind === "audioinput").length;
         setDetails(`${cams} camera(s), ${mics} microphone(s) detected`);
-      } catch (e: any) {
-        const msg = typeof e?.message === "string" ? e.message : String(e);
+      } catch (e: unknown) {
+        const msg = e instanceof Error ? e.message : String(e);
         setDetails(msg);
         if (msg.toLowerCase().includes("denied") || msg.toLowerCase().includes("not allowed")) {
           setCamera("blocked");

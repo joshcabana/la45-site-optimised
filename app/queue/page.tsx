@@ -85,7 +85,10 @@ function QueueInner() {
           pollRef.current = null;
           const { match } = j;
           router.push(`/call?roomId=${match.roomId}&matchId=${match.matchId}`);
-          (window as any).matchId = match.matchId;
+          // Store match ID for debugging purposes
+          if (typeof window !== "undefined") {
+            (window as Window & { matchId?: string }).matchId = match.matchId;
+          }
         } else {
           elapsed += 1500;
           if (elapsed > 30000) {
@@ -97,7 +100,10 @@ function QueueInner() {
       pollRef.current = iv;
     } catch (err) {
       setLoading(false);
-      console.error(err);
+      // Handle error appropriately - could show user notification
+      if (process.env.NODE_ENV === "development") {
+        console.error("Queue polling error:", err);
+      }
     }
   };
 

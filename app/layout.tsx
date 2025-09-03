@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StickyNav from "@/components/StickyNav";
-import { inter, playfair } from "./fonts";
-import WebVitalsRUM from "@/components/WebVitalsRUM";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -41,13 +39,13 @@ export const metadata: Metadata = {
   },
 };
 
-// The root layout wraps all pages. It defines the language, fonts and
-// provides a skip link for keyboard users. Children are rendered inside
-// the <body> so that Tailwind classes apply globally.
+// The root layout wraps all pages. It defines the language and provides a
+// skip link for keyboard users. Children are rendered inside the <body> so
+// that Tailwind classes apply globally.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-AU">
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+      <body className="font-sans">
         {/* Accessible skip link appears on focus and moves keyboard users
             directly to the main content area. */}
         <a
@@ -59,7 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyNav />
         {children}
         <AnalyticsConsent />
-        <WebVitalsRUM />
         <SpeedInsights />
         <Analytics />
       </body>

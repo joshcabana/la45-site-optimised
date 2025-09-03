@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import StickyNav from "@/components/StickyNav";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Inter, Playfair_Display } from "next/font/google";
 
 
 // Determine the site's base URL. Prefer NEXT_PUBLIC_SITE_URL but fall back to
@@ -9,6 +11,12 @@ import AnalyticsConsent from "@/components/AnalyticsConsent";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://la45.example");
+
+// Load fonts via next/font and expose as CSS variables that Tailwind maps to
+// font-sans / font-serif families. This avoids any runtime network requests
+// for font CSS and enables font-display:swap by default.
+const fontSans = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
+const fontSerif = Playfair_Display({ subsets: ["latin"], display: "swap", variable: "--font-serif" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -43,7 +51,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-AU">
-      <body className="font-sans">
+      <body className={`${fontSans.variable} ${fontSerif.variable} font-sans`}>
         {/* Accessible skip link appears on focus and moves keyboard users
             directly to the main content area. */}
         <a
@@ -54,6 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <StickyNav />
         {children}
+        {/* Speed insights are safe to include globally for performance telemetry */}
+        <SpeedInsights />
+        {/* Cookie/analytics consent modal (Analytics is gated within) */}
         <AnalyticsConsent />
       </body>
     </html>

@@ -16,6 +16,7 @@ const FooterCABANA = dynamic(() => import("@/components/FooterCABANA"), {
   ssr: false,
   loading: () => <div className="min-h-[20rem]" />,
 });
+const QueueStats = dynamic(() => import("@/components/QueueStats"), { ssr: false });
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -37,6 +38,7 @@ export default function HomePage() {
         <DonationMount location="home" />
         <ValueProps />
         <SocialProof />
+        <QueueStats />
         <FooterCABANA />
       </main>
     </>

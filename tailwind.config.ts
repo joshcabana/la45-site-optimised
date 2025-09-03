@@ -9,7 +9,7 @@ const config: Config = {
   safelist: [
     // Ensure focus ring utilities are retained in production builds
     "focus-visible:ring-2",
-    "focus-visible:ring-gold-500",
+    "focus-visible:ring-gold",
     "focus-visible:ring-offset-2",
     "focus-visible:outline-none",
   ],
@@ -18,9 +18,7 @@ const config: Config = {
       colors: {
         ink: "var(--color-ink)",
         paper: "var(--color-paper)",
-        gold: {
-          500: "var(--color-gold-500)",
-        },
+        gold: "var(--color-gold-500)",
       },
       fontFamily: {
         // Mapped to next/font variables defined in app/fonts.ts

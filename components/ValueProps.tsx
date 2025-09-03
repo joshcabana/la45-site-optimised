@@ -7,7 +7,7 @@ function Card({ title, body, delay }: { title: string; body: string; delay: numb
   return (
     <div
       ref={ref}
-      className={`p-6 rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/40 transition-opacity duration-700 ${
+      className={`p-6 rounded-2xl border border-gold/20 bg-paper transition-opacity duration-700 ${
         reveal ? "opacity-100" : "opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}

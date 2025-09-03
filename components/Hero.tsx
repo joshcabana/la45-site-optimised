@@ -22,7 +22,7 @@ export default function Hero() {
   };
   return (
     <section
-      className="relative min-h-svh md:min-h-[82vh] overflow-hidden px-4"
+      className="relative min-h-[70vh] md:min-h-[82vh] flex items-center overflow-hidden px-4"
       aria-labelledby="hero-title"
     >
       <div className="absolute inset-0" aria-hidden>
@@ -81,7 +81,7 @@ export default function Hero() {
             <Link
               href="/signup"
               onClick={() => gaEvent("signup_click")}
-              className="inline-flex items-center justify-center px-6 py-3 min-h-[44px] rounded-full bg-gold-500 text-ink font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="inline-flex items-center justify-center px-5 py-3 min-h-[44px] rounded-lg bg-gold-500 text-ink font-medium hover:opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               Try a live demo
             </Link>

@@ -17,19 +17,19 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "LA45 — 45‑second live dates", template: "%s · LA45" },
+  title: { default: "LA45 — 45‑second live speed‑dates", template: "%s · LA45" },
   description: "Live video speed dates. Anonymous until you both match.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: "/",
-    title: "LA45",
+    title: "LA45 — 45‑second live speed‑dates",
     siteName: "LA45",
     description: "Live video speed dates.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LA45",
+    title: "LA45 — 45‑second live speed‑dates",
     description: "Live video speed dates.",
   },
   manifest: "/manifest.webmanifest",

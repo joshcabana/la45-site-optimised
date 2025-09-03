@@ -1,4 +1,3 @@
-<<<<<<< ours
 import { Inter, Playfair_Display } from "next/font/google";
 
 // Preload our chosen fonts and expose the CSS variables so they can be
@@ -20,18 +19,4 @@ export const playfair = Playfair_Display({
   preload: true,
   display: "optional",
   adjustFontFallback: true,
-=======
-import { Playfair_Display, Inter } from 'next/font/google';
-
-export const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-});
-
-export const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
->>>>>>> theirs
 });

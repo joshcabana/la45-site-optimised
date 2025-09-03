@@ -106,7 +106,7 @@ export default function OnboardingPage() {
             value={handle}
             onChange={(e) => setHandle(e.target.value)}
             placeholder="e.g. beachrunner"
-            className="w-full rounded-xl bg-black/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            className="w-full rounded-xl bg-ink/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
           />
           <p className="text-ink/60 text-sm">
             Share real details only after a mutual match.

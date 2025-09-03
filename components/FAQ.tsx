@@ -74,7 +74,7 @@ export default function FAQ() {
       </h2>
 
       {/* Slim Code of Conduct (zero‑tolerance language) */}
-      <div className="mb-8 rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6">
+      <div className="mb-8 rounded-2xl border border-gold/20 bg-paper p-6">
         <h3 className="font-serif text-xl mb-2">Code of Conduct</h3>
         <ul className="list-disc list-inside text-ink/80 space-y-1">
           <li>Be respectful. No harassment or hate.</li>
@@ -94,7 +94,7 @@ export default function FAQ() {
               {s.items.map((f, i) => (
                 <details
                   key={`${si}-${i}`}
-                  className="rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6"
+                  className="rounded-2xl border border-gold/20 bg-paper p-6"
                 >
                   <summary className="cursor-pointer font-medium">{f.q}</summary>
                   <p className="mt-2 text-ink/80">{f.a}</p>

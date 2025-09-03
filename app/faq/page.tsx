@@ -137,7 +137,7 @@ export default function Page() {
     <main id="main" className="mx-auto max-w-4xl px-4 py-16">
       <h1 id="faq" className="text-3xl md:text-4xl font-semibold tracking-tight">FAQ</h1>
 
-      <div className="mt-8 mb-8 rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6">
+      <div className="mt-8 mb-8 rounded-2xl border border-gold/20 bg-paper p-6">
         <h2 className="font-serif text-xl mb-2">Code of Conduct</h2>
         <ul className="list-disc list-inside text-ink/80 space-y-1">
           <li>Be respectful. No harassment or hate.</li>
@@ -156,7 +156,7 @@ export default function Page() {
               {s.items.map((f, i) => (
                 <details
                   key={`${si}-${i}`}
-                  className="rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6"
+                  className="rounded-2xl border border-gold/20 bg-paper p-6"
                 >
                   <summary className="cursor-pointer font-medium min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md">{f.q}</summary>
                   <p className="mt-2 text-ink/80">{f.a}</p>

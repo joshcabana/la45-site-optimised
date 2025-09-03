@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             directly to the main content area. */}
         <a
           href="#main"
-          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:px-3 focus-visible:py-2 focus-visible:bg-black focus-visible:text-white focus-visible:ring-2 focus-visible:ring-gold"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:px-3 focus-visible:py-2 focus-visible:bg-ink focus-visible:text-paper focus-visible:ring-2 focus-visible:ring-gold"
         >
           Skip to main content
         </a>

@@ -26,7 +26,7 @@ export default function DonationRibbon() {
     <div
       role="region"
       aria-label="Support LA45"
-      className="sticky top-0 z-40 border-b border-[rgba(200,164,93,0.25)] bg-white/60 backdrop-blur"
+      className="sticky top-0 z-40 border-b border-gold/25 bg-paper/60 backdrop-blur"
     >
       <form className="mx-auto grid max-w-5xl items-center gap-3 px-4 py-2 sm:grid-cols-[1fr_auto_auto]">
         <fieldset className="contents">

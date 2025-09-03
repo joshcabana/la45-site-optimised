@@ -48,7 +48,7 @@ export default function SignupPage() {
           <label htmlFor="displayName" className="block text-sm mb-2">Display name</label>
           <input
             id="displayName"
-            className="w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            className="w-full rounded-xl bg-paper/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
             placeholder="e.g. beachrunner"
             value={displayName}
             onChange={(e) => setDisplayName(e.target.value)}
@@ -76,7 +76,7 @@ export default function SignupPage() {
                 key={opt}
                 onClick={() => setIdentity(opt)}
                 className={`rounded-full px-4 py-2 min-h-[44px] border text-sm ${
-                  identity === opt ? "border-gold bg-black/5" : "border-black/10 hover:border-black/20"
+                  identity === opt ? "border-gold bg-ink/5" : "border-ink/10 hover:border-ink/20"
                 }`}
               >
                 {opt}
@@ -85,7 +85,7 @@ export default function SignupPage() {
           </div>
           {identity === "Another" && (
             <input
-              className="mt-2 w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className="mt-2 w-full rounded-xl bg-paper/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
               placeholder="Describe in your own words"
               value={identityOther}
               onChange={(e) => setIdentityOther(e.target.value)}
@@ -102,7 +102,7 @@ export default function SignupPage() {
                 key={opt}
                 onClick={() => setPronouns(opt)}
                 className={`rounded-full px-4 py-2 min-h-[44px] border text-sm ${
-                  pronouns === opt ? "border-gold bg-black/5" : "border-black/10 hover:border-black/20"
+                  pronouns === opt ? "border-gold bg-ink/5" : "border-ink/10 hover:border-ink/20"
                 }`}
               >
                 {opt}
@@ -111,7 +111,7 @@ export default function SignupPage() {
           </div>
           {pronouns === "Self describe" && (
             <input
-              className="mt-2 w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className="mt-2 w-full rounded-xl bg-paper/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
               placeholder="Share your pronouns"
               value={pronounsOther}
               onChange={(e) => setPronounsOther(e.target.value)}
@@ -124,7 +124,7 @@ export default function SignupPage() {
           <input
             id="email"
             type="email"
-            className="w-full rounded-xl bg-white/5 border border-black/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            className="w-full rounded-xl bg-paper/5 border border-ink/10 px-4 py-3 outline-none focus-visible:ring-2 focus-visible:ring-gold"
             placeholder="name@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

@@ -29,7 +29,7 @@ export default function TokenPacks() {
         {packs.map((p, idx) => (
           <div
             key={idx}
-            className="rounded-2xl border border-gold/20 bg-black/5 p-6 flex flex-col justify-between"
+            className="rounded-2xl border border-gold/20 bg-ink/5 p-6 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-center justify-between">
@@ -56,7 +56,7 @@ export default function TokenPacks() {
               </ul>
             </div>
             <button
-              className="mt-6 inline-flex items-center justify-center rounded-full border border-gold/40 hover:border-gold/60 bg-black/30 hover:bg-black/40 px-5 py-3 text-sm min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className="mt-6 inline-flex items-center justify-center rounded-full border border-gold/40 hover:border-gold/60 bg-ink/30 hover:bg-ink/40 px-5 py-3 text-sm min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               aria-disabled="true"
               title="Purchases disabled in beta"
               onClick={() => console.log("Disabled in beta")}

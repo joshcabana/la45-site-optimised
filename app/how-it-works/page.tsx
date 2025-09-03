@@ -19,7 +19,7 @@ export default function Page() {
         {items.map((i, idx) => (
           <li
             key={idx}
-            className="rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6"
+            className="rounded-2xl border border-gold/20 bg-paper p-6"
           >
             <h3 className="font-serif text-xl">{i.title}</h3>
             <p className="mt-2 text-ink/80">{i.body}</p>

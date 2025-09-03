@@ -1,11 +1,13 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL!;
-  return [
-    { url: `${base}/`, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${base}/safety`, changeFrequency: 'monthly' },
-    { url: `${base}/privacy`, changeFrequency: 'yearly' },
-    { url: `${base}/terms`, changeFrequency: 'yearly' },
-  ];
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://la45-site-optimised.vercel.app';
+  const now = new Date();
+  const routes = ['', 'how-it-works', 'safety', 'faq', 'guidelines', 'privacy', 'terms'];
+  return routes.map((p) => ({
+    url: `${base}/${p}`.replace(/\/$/, ''),
+    lastModified: now,
+    changeFrequency: p === '' ? 'weekly' : 'monthly',
+    priority: p === '' ? 1 : 0.6,
+  }));
 }

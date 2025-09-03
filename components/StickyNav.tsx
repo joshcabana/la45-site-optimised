@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import LiveAussieTime from "./LiveAussieTime";
+import { gaEvent } from "@/utils/ga";
 
 /**
  * StickyNav renders a fixed header that becomes opaque on scroll and
@@ -132,14 +133,20 @@ export default function StickyNav() {
           </Link>
           <Link
             href="/onboarding"
-            onClick={handleLinkClick}
+            onClick={() => {
+              gaEvent("signup_click");
+              handleLinkClick();
+            }}
             className="text-sm hover:underline decoration-gold-500 underline-offset-4"
           >
             Sign up
           </Link>
           <Link
             href="/signup"
-            onClick={handleLinkClick}
+            onClick={() => {
+              gaEvent("enter_queue_click");
+              handleLinkClick();
+            }}
             className="sm:ml-2 inline-flex items-center px-4 py-2 rounded-full bg-gold-500 text-ink text-sm font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
           >
             Enter the queue

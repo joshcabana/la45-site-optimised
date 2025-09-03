@@ -1,14 +1,14 @@
 "use client";
 
-import { useInView } from "./hooks/useInView";
+import { useIO } from "@/hooks/useIO";
 
 function Card({ title, body, delay }: { title: string; body: string; delay: number }) {
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, isIntersecting } = useIO<HTMLDivElement>();
   return (
     <div
       ref={ref}
       className={`p-6 rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/40 transition-opacity duration-700 ${
-        inView ? "opacity-100" : "opacity-0"
+        isIntersecting ? "opacity-100" : "opacity-0"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >

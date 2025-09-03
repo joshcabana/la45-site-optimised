@@ -10,7 +10,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/:path*",
         headers: [
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
           { key: "X-Frame-Options", value: "DENY" },
@@ -19,8 +19,15 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; img-src 'self' https: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://vitals.vercel-insights.com;",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' https://cdn.vercel-insights.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https:",
+              "connect-src 'self' https:",
+              "font-src 'self' https: data:",
+              "frame-ancestors 'none'",
+            ].join("; "),
           },
         ],
       },

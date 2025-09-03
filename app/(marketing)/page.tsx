@@ -2,56 +2,19 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import DonationMount from "@/components/DonationMount";
 import StructuredData from "@/components/StructuredData";
-import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 
 const ValueProps = dynamic(() => import("@/components/ValueProps"), {
   ssr: false,
-<<<<<<< ours
-  loading: () => <div className="min-h-[400px]" />,
-});
-const QueueExplainer = dynamic(() => import("@/components/QueueExplainer"), {
-  ssr: false,
-  loading: () => <div className="min-h-[400px]" />,
-});
-const SafetyAnonymity = dynamic(() => import("@/components/SafetyAnonymity"), {
-  ssr: false,
-  loading: () => <div className="min-h-[400px]" />,
-});
-const SocialProof = dynamic(() => import("@/components/SocialProof"), {
-  ssr: false,
-  loading: () => <div className="min-h-[400px]" />,
-});
-const FAQ = dynamic(() => import("@/components/FAQ"), {
-  ssr: false,
-  loading: () => <div className="min-h-[800px]" />,
-});
-const FooterCABANA = dynamic(() => import("@/components/FooterCABANA"), {
-  ssr: false,
-  loading: () => <div className="min-h-[300px]" />,
-=======
   loading: () => <div className="min-h-[32rem]" />,
-});
-const QueueExplainer = dynamic(() => import("@/components/QueueExplainer"), {
-  ssr: false,
-  loading: () => <div className="min-h-[28rem]" />,
-});
-const SafetyAnonymity = dynamic(() => import("@/components/SafetyAnonymity"), {
-  ssr: false,
-  loading: () => <div className="min-h-[28rem]" />,
 });
 const SocialProof = dynamic(() => import("@/components/SocialProof"), {
   ssr: false,
   loading: () => <div className="min-h-[24rem]" />,
 });
-const FAQ = dynamic(() => import("@/components/FAQ"), {
-  ssr: false,
-  loading: () => <div className="min-h-[60rem]" />,
-});
 const FooterCABANA = dynamic(() => import("@/components/FooterCABANA"), {
   ssr: false,
   loading: () => <div className="min-h-[20rem]" />,
->>>>>>> theirs
 });
 
 export const metadata: Metadata = {
@@ -60,7 +23,7 @@ export const metadata: Metadata = {
 
 /**
  * The home page stitches together all of the landing sections. It
- * intentionally avoids client‑side interactivity other than the
+ * intentionally avoids client-side interactivity other than the
  * sticky nav and hero, meaning most of the page can be statically
  * rendered for excellent performance. DonationMount is commented
  * out because donations are disabled while the product is in beta.
@@ -73,10 +36,7 @@ export default function HomePage() {
         <StructuredData />
         <DonationMount location="home" />
         <ValueProps />
-        <QueueExplainer />
-        <SafetyAnonymity />
         <SocialProof />
-        <FAQ />
         <FooterCABANA />
       </main>
     </>

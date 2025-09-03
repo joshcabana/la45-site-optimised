@@ -16,8 +16,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui"],
-        serif: ["var(--font-playfair)", "ui-serif", "Georgia"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia"],
       },
     },
   },

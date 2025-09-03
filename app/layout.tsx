@@ -1,32 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StickyNav from "@/components/StickyNav";
-import { Inter, Playfair_Display } from "next/font/google";
+import { inter, playfair } from "./fonts";
 import WebVitalsRUM from "@/components/WebVitalsRUM";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// Preload our chosen fonts and expose the CSS variables so they can be
-// referenced in components and Tailwind. Display swap avoids flashes of
-// invisible text on slow connections and adjustFontFallback improves
-// cross‑platform rendering consistency.
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  preload: true,
-  display: "swap",
-  adjustFontFallback: true,
-});
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["700"],
-  variable: "--font-playfair",
-  preload: true,
-  display: "optional",
-  adjustFontFallback: true,
-});
+
+// Determine the site's base URL. Prefer NEXT_PUBLIC_SITE_URL but fall back to
+// the deployment URL (e.g. Vercel) or a reasonable default.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://la45.example");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://la45.example"),
+  metadataBase: new URL(siteUrl),
   title: { default: "LA45 — 45‑second live dates", template: "%s · LA45" },
   description: "Live video speed dates. Anonymous until you both match.",
   alternates: { canonical: "/" },
@@ -36,18 +25,20 @@ export const metadata: Metadata = {
     title: "LA45",
     siteName: "LA45",
     description: "Live video speed dates.",
-    images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "LA45 — 45‑second live dates",
-      },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LA45",
+    description: "Live video speed dates.",
+  },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
   },
-  twitter: { card: "summary_large_image" },
-  manifest: "/manifest.webmanifest",
-  icons: { icon: "/icon.svg" },
 };
 
 // The root layout wraps all pages. It defines the language, fonts and
@@ -69,6 +60,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <AnalyticsConsent />
         <WebVitalsRUM />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

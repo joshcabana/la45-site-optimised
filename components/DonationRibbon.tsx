@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { startDonation } from "@/lib/donate";
-import { track } from "@/components/utils/analytics";
+import { gaEvent } from "@/utils/ga";
 
 /**
  * A simple donation banner prompting users to support LA45. It shows a few
@@ -19,7 +19,7 @@ export default function DonationRibbon() {
   const Button = ({ amt }: { amt: number }) => (
     <button
       onClick={() => {
-        track?.("donation_click_amount", { amount: amt });
+        gaEvent("donation_select", { amount: amt });
         startDonation(amt);
       }}
       className="rounded-full border border-ink/20 px-3 py-1 text-sm hover:border-ink/40 hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-gold-500/50"
@@ -45,7 +45,7 @@ export default function DonationRibbon() {
           <Button amt={25} />
           <button
             onClick={() => {
-              track?.("donation_click_custom", {});
+              gaEvent("donation_select", { amount: 0 });
               startDonation(0);
             }}
             className="text-xs underline underline-offset-4 opacity-80 hover:opacity-100"

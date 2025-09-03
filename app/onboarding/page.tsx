@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { gaEvent } from "@/utils/ga";
 
 /**
  * This onboarding flow guides new users through a few short steps before
@@ -146,12 +147,14 @@ export default function OnboardingPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/queue?guest=1"
+              onClick={() => gaEvent("enter_queue_click")}
               className="rounded-full bg-gold-500 text-ink px-6 py-3 text-center hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
             >
               Continue as guest (limited)
             </Link>
             <Link
               href="/queue"
+              onClick={() => gaEvent("enter_queue_click")}
               className="rounded-full border border-ink/20 px-6 py-3 text-center hover:border-ink/40 focus-visible:ring-2 focus-visible:ring-gold-500"
             >
               Sign in to join queue

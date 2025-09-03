@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import dynamic from "next/dynamic";
+import { gaEvent } from "@/utils/ga";
 
 // Lazy-load TokenPacks so queue page stays light on first paint
 const TokenPacks = dynamic(() => import("@/components/TokenPacks"), { ssr: false });
@@ -117,7 +118,10 @@ function QueueInner() {
         We’ll pair you for a 45‑second video intro.
       </p>
       <button
-        onClick={enter}
+        onClick={() => {
+          gaEvent("enter_queue_click");
+          enter();
+        }}
         disabled={loading}
         className="rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 disabled:opacity-50 focus-visible:ring-2 focus-visible:ring-gold-500"
       >

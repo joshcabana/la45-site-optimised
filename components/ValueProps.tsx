@@ -1,6 +1,6 @@
 "use client";
 
-import useInView from "@/hooks/useInView";
+import useInView from "@/components/hooks/useInView";
 
 function Card({ title, body, delay }: { title: string; body: string; delay: number }) {
   const { ref, reveal } = useInView<HTMLDivElement>();

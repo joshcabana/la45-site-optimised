@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import StickyNav from "@/components/StickyNav";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 // Determine the site's base URL. Prefer NEXT_PUBLIC_SITE_URL but fall back to
@@ -57,8 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyNav />
         {children}
         <AnalyticsConsent />
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   );

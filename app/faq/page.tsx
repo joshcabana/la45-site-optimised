@@ -158,7 +158,7 @@ export default function Page() {
                   key={`${si}-${i}`}
                   className="rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6"
                 >
-                  <summary className="cursor-pointer font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-md">{f.q}</summary>
+                  <summary className="cursor-pointer font-medium min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded-md">{f.q}</summary>
                   <p className="mt-2 text-ink/80">{f.a}</p>
                 </details>
               ))}

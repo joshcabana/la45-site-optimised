@@ -16,7 +16,7 @@ export default function NotFound() {
         <p className="mt-4 text-lg text-ink/70">This page doesn’t exist.</p>
         <Link
           href="/"
-          className="mt-6 inline-block rounded-full border border-[rgba(200,164,93,0.4)] px-6 py-3 hover:border-[rgba(200,164,93,0.6)] hover:bg-black/40"
+          className="mt-6 inline-block rounded-full border border-gold/30 px-6 py-3 min-h-[44px] hover:border-gold/50 hover:bg-ink/40 focus-visible:ring-2 focus-visible:ring-gold"
         >
           Back to Home
         </Link>

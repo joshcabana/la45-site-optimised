@@ -58,7 +58,7 @@ export default function StickyNav() {
         <Link
           href="/"
           onClick={handleLinkClick}
-          className="font-serif text-xl tracking-tight hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          className="font-serif text-xl tracking-tight hover:opacity-90 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         >
           LA45
         </Link>
@@ -83,6 +83,7 @@ export default function StickyNav() {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="h-6 w-6"
+                aria-hidden
               >
                 <path
                   fillRule="evenodd"
@@ -97,6 +98,7 @@ export default function StickyNav() {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className="h-6 w-6"
+                aria-hidden
               >
                 <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               </svg>

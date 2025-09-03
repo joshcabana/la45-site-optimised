@@ -56,7 +56,7 @@ export default function DonationRibbon() {
               type="button"
               onClick={confirm}
               disabled={amount == null}
-              className="rounded-full bg-gold-500 text-ink px-3 py-1 text-xs disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              className="rounded-full bg-gold text-ink px-3 py-1 text-xs min-h-[44px] disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               Donate
             </button>
@@ -64,7 +64,7 @@ export default function DonationRibbon() {
               type="button"
               aria-label="Hide support prompt"
               onClick={hide}
-              className="text-xs opacity-60 hover:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded"
+              className="text-xs opacity-60 hover:opacity-100 min-h-[44px] px-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold rounded"
             >
               Hide
             </button>

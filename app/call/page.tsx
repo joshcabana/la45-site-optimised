@@ -54,7 +54,7 @@ function CallInner() {
       </p>
       <button
         onClick={onEnd}
-        className="mt-6 rounded-full bg-gold-500 text-ink px-6 py-3 hover:bg-gold-600 focus-visible:ring-2 focus-visible:ring-gold-500"
+        className="mt-6 rounded-full bg-gold text-ink px-6 py-3 min-h-[44px] hover:opacity-90 focus-visible:ring-2 focus-visible:ring-gold"
       >
         End call
       </button>

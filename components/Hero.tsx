@@ -28,7 +28,8 @@ export default function Hero() {
       <div className="absolute inset-0" aria-hidden>
         <Image
           src="/photos/hero-poster.jpg"
-          alt="LA45 hero"
+          alt=""
+          aria-hidden
           fill
           priority
           placeholder="blur"

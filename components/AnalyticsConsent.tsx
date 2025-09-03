@@ -78,7 +78,7 @@ export default function AnalyticsConsent() {
                 ref={firstBtnRef}
                 type="button"
                 onClick={deny}
-                className="px-3 py-2 rounded border focus-visible:ring-2 focus-visible:ring-gold-500"
+                className="px-3 py-2 min-h-[44px] rounded border focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Decline
               </button>
@@ -86,7 +86,7 @@ export default function AnalyticsConsent() {
                 ref={lastBtnRef}
                 type="button"
                 onClick={allow}
-                className="px-3 py-2 rounded bg-gold-500 text-ink focus-visible:ring-2 focus-visible:ring-gold-500"
+                className="px-3 py-2 min-h-[44px] rounded bg-gold text-ink focus-visible:ring-2 focus-visible:ring-gold"
               >
                 Allow
               </button>

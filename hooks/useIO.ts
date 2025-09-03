@@ -13,7 +13,7 @@ export function useIO<T extends Element>(
     const io = new IntersectionObserver(([e]) => set(e.isIntersecting), options);
     io.observe(el);
     return () => io.disconnect();
-  }, [options?.rootMargin, options?.threshold]);
+  }, [options]);
 
   return { ref, isIntersecting };
 }

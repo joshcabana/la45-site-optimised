@@ -57,7 +57,7 @@ export default function AnalyticsConsent() {
       {consent === "granted" && <Analytics />}
       {consent === null && (
         <div
-          aria-hidden={false}
+          aria-hidden="false"
           className="fixed inset-0 z-50 grid place-items-center bg-black/50"
         >
           <div

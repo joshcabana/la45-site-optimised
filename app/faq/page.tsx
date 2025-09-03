@@ -4,6 +4,19 @@ import { formatDateAU } from "@/components/utils/formatters";
 
 const sections: { title: string; items: { q: string; a: string }[] }[] = [
   {
+    title: "Essentials",
+    items: [
+      { q: "Is LA45 18+?", a: "Yes. You must be 18 or older. We may require age verification. Accounts violating this are permanently banned." },
+      { q: "Are calls recorded?", a: "No. Calls are not recorded or stored. We log minimal technical metrics to keep the service running (see Privacy)." },
+      { q: "How do I report someone?", a: "Use Block/Report during or after a call. Severe breaches lead to permanent device bans and IP-based access restrictions." },
+      { q: "What behaviour is not allowed?", a: "Harassment, hate, threats, explicit content, doxxing, spam/scams, illegal content or activity. See Guidelines." },
+      { q: "What data do you keep?", a: "Minimal account data, technical logs, and tokens. We do not sell personal data. You can request deletion." },
+      { q: "Accessibility?", a: "Captions, large text, high contrast, reduced-motion, keyboard support. Tell us what you need at support@la45.app." },
+      { q: "Where is LA45 available?", a: "Australia-first beta. We’ll expand based on demand." },
+      { q: "Pricing / tokens?", a: "Free in beta. Tokens may be introduced later to manage queue fairness and abuse." },
+    ],
+  },
+  {
     title: "Experience",
     items: [
       { q: "What is LA45 in one line?", a: "Live, 45‑second video intros—no swiping. If you both tap Extend, the call continues for up to five minutes." },
@@ -145,7 +158,7 @@ export default function Page() {
                   key={`${si}-${i}`}
                   className="rounded-2xl border border-[rgba(200,164,93,0.22)] bg-black/5 p-6"
                 >
-                  <summary className="cursor-pointer font-medium">{f.q}</summary>
+                  <summary className="cursor-pointer font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-md">{f.q}</summary>
                   <p className="mt-2 text-ink/80">{f.a}</p>
                 </details>
               ))}

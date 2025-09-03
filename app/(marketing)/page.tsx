@@ -41,6 +41,15 @@ export default function HomePage() {
         <QueueStats />
         <FooterCABANA />
       </main>
+      {/* Mobile bottom sticky CTA to improve primary action discoverability */}
+      <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] bg-black/70 backdrop-blur border-t border-white/10">
+        <a
+          href="/signup"
+          className="block w-full text-center rounded-full bg-gold-500 text-ink font-medium px-6 py-3 min-h-[44px] hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+        >
+          Enter the queue
+        </a>
+      </div>
     </>
   );
 }

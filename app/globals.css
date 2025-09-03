@@ -18,6 +18,7 @@ body {
   scroll-behavior: smooth;
   background: var(--color-paper);
   color: var(--color-ink);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Subtle maison-style pattern overlay for a luxury vibe */
@@ -39,6 +40,13 @@ body::before {
 
 * {
   box-sizing: border-box;
+}
+
+/* Mobile tap comfort: 44px minimum target and no native tap highlight */
+a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
+  min-height: 44px;
+  min-width: 44px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Focus visible for accessibility */
@@ -138,3 +146,8 @@ video::-webkit-media-controls {
 }
 
 /* No overrides: use Tailwind ink/paper/gold utilities consistently */
+
+/* Viewport unit fix: support small viewport height for mobile browsers */
+@supports (height: 100svh) {
+  .min-h-svh { min-height: 100svh; }
+}
